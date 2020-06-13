@@ -2,7 +2,7 @@ import Deck from '@/resources/deck';
 
 const newDeck = new Deck();
 it('Ensures a Deck of cards has 54 cards, including Jokers', () => {
-  expect(newDeck.deck.length).toBe(54);
+  expect(newDeck.deck.length).toEqual(54);
 });
 
 const expectedSuits = ['heart', 'diamond', 'club', 'spade'];
@@ -15,7 +15,6 @@ it('Ensure that all cards between 8 and black 3s are worth 5 points', () => {
   expect(newDeck.fivePointCards).toEqual(fivePointValueCards);
 });
 
-console.log(newDeck.tenPointCards);
 const tenPointValueCards = [9, 10, 11, 12, 13, 9, 10, 11, 12, 13, 9, 10, 11, 12, 13, 9, 10, 11, 12, 13];
 it('Ensure that all cards over a 9 are worth 10 points', () => {
   expect(newDeck.tenPointCards).toEqual(tenPointValueCards);
@@ -37,7 +36,7 @@ it('Ensure that red 3s are worth -50 points', () => {
 });
 
 const nineOfHearts = newDeck.cardByName(9, 'heart');
-it('A card is created with a suit, rank and value', () => {
+it('A card can be created with just a rank and suit', () => {
   expect(nineOfHearts.suit).toBe('heart');
   expect(nineOfHearts.rank).toBe(9);
   expect(nineOfHearts.points).toBe(10);
