@@ -46,22 +46,23 @@
   - Current Round (int)
   - Number of decks (int)
 
+### Terminology
+- Natural Book
+- Unnatural Book
+- Meld
+- Go out
+- Open(ed) Book
+- Close(d) Book
+
 ### Routes
 - Books
   - /teams/{id}/books/open/{numeric_value}/{cards}
   - /teams/{id}/books/close/{book_id}
 
-### Going Out
-- Team must have at least two "Natural" closed books
-- Team cannot go out if do not have at least two "Natural" closed books
-- Team must have at least two "Unnatural" closed books
-- Team cannot go out if do not have at least two "Unnatural" closed books
-- One player on the team must have no cards in hand or foot
-
 ### Game Setup
 - Must have 4 or more players
 - Must have an even number of players
-- Must have at least as many decks as players plus one
+- Must have at least as many decks as number of players plus one
 - Must deal 14 cards to hand
 - Must deal 14 cards to foot
 - Draw pile must have remaining cards
@@ -115,19 +116,18 @@
 - A player cannot meld first for their team, unless the cards being laid down total to more than 120 points in round 3
 - A player can meld cards, if their team has already melded.
 
+### Going Out
+- Team must have at least two "Natural" closed books
+- Team cannot go out if do not have at least two "Natural" closed books
+- Team must have at least two "Unnatural" closed books
+- Team cannot go out if do not have at least two "Unnatural" closed books
+- One player on the team must have no cards in hand or foot
+
 #### Round End
 - After each round, points are counted and recorded
 - Round stops once a team has required closed books and one team member plays last card in their foot
 - After points are recorded, all cards are shuffled thoroughly
 - The next round cannot start until the cards are shuffled
-
-### Terminology
-- Natural Book
-- Unnatural Book
-- Meld
-- Go out
-- Open(ed) Book
-- Close(d) Book
 
 ### Points
 - All closed natural books are 100 points
