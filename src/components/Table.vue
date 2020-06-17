@@ -1,12 +1,19 @@
 <template>
-  <div>
-    <div>Howdy!</div>
-    <div>Let's get a game going!</div>
-  </div>
+  <v-container class="fill-height home">
+    Howdy!
+  </v-container>
 </template>
 
 <script>
+// @ is an alias to /src
+
 export default {
-  name: 'Table',
+  name: 'Home',
+  components: {
+  },
 };
 </script>
+
+<style scoped>
+.home {background-color: green;}
+</style>
